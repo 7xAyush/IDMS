@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./screens/Home";
 import DetailScreen from "./screens/DetailScreen";
-import SupportScreen from "./screens/SupportScreen"; // ✅ Import Support screen
+import SupportScreen from "./screens/SupportScreen"; 
 
 const Stack = createNativeStackNavigator();
 
