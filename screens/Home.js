@@ -23,7 +23,6 @@ import { Modal, Pressable } from "react-native";
 import { Animated, Dimensions } from "react-native";
 import { TouchableWithoutFeedback } from "react-native";
 
-
 const Head = ({ openDrawer }) => {
   const [showConfirmModal, setShowConfirmModal] = useState(false);
 
@@ -65,7 +64,10 @@ const Head = ({ openDrawer }) => {
             backgroundColor: "#54BEFF",
             paddingVertical: 24,
             paddingHorizontal: 16,
-            borderRadius: 24,
+            borderTopLeftRadius: 4,
+            borderTopRightRadius: 4,
+            borderBottomRightRadius: 24,
+            borderBottomLeftRadius: 24,
           }}
         >
           <View
@@ -262,7 +264,7 @@ const Cards = ({ navigation }) => {
       </ScrollView>
 
       <TouchableOpacity
-       onPress={() => navigation.navigate("Support")}
+        onPress={() => navigation.navigate("Support")}
         style={{
           position: "absolute",
           bottom: 30,
@@ -415,11 +417,7 @@ export default function Home({ navigation }) {
             alignItems: "center",
           }}
         >
-          <UserNameText
-          text={"LOGOUT"}
-          weight={600}
-          color={"white"}
-          />
+          <UserNameText text={"LOGOUT"} weight={600} color={"white"} />
         </TouchableOpacity>
       </Animated.View>
     </View>
